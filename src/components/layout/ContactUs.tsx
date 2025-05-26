@@ -109,6 +109,8 @@ export function ContactUs() {
 										<p className="text-muted-foreground">
 											NVersion ApS
 											<br />
+											CVR: 45564584
+											<br />
 											Peter Holms Vej 11, 3TV
 											<br />
 											2450 Copenhagen SV
