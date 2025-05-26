@@ -1,30 +1,15 @@
 ---
-import { Image } from 'astro:assets'
-import type { CollectionEntry } from 'astro:content'
-import { getEntry, render } from 'astro:content'
-import Base from '@/layouts/Base.astro'
-import { markdownify } from '@/lib/utils/textConverter'
-
-const entry = (await getEntry('pages', '404')) as CollectionEntry<'pages'>
-const { Content } = await render(entry)
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Base title={entry.data.title}>
-  <section class="section">
-    <div class="container">
-      <div class="flex h-[40vh] items-center justify-center">
-        <div class="text-center">
-          <Image
-            src="/images/404.png"
-            class="mb-4 inline"
-            alt="logo"
-            height={120}
-            width={120}
-          />
-          <h1 class="mb-4" set:html={markdownify(entry.data.title)} />
-          <Content />
-        </div>
-      </div>
+<Layout title="404 - Page Not Found">
+  <div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold mb-4">404</h1>
+      <p class="text-xl text-gray-600 mb-4">Oops! Page not found</p>
+      <a href="/" class="text-blue-500 hover:text-blue-700 underline">
+        Return to Home
+      </a>
     </div>
-  </section>
-</Base>
+  </div>
+</Layout>

@@ -1,0 +1,20 @@
+---
+import { ServiceList } from '../components/layout/ServiceList'
+import Layout from '../layouts/Layout.astro'
+--- 
+
+
+<Layout title="NVersion - Services">
+        <section id="services" class="bg-muted py-20">
+            <div class="container">
+              <div class="mx-auto mb-16 max-w-2xl text-center">
+                <h2 class="mb-4">Our Services</h2>
+                <p class="text-xl text-muted-foreground">
+                  Expert consulting and implementation services.
+                </p>
+              </div>
+              <ServiceList />
+            </div>
+        </section>
+
+</Layout>
